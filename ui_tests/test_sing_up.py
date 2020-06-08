@@ -1,12 +1,15 @@
 import pytest
 import time
+import allure
 
 from pages.CreatePasswordPage import CreatePasswordPage
 from pages.SingInPage import SingInPage
 from pages.SingUpPage import SingUpPage
 
 
-@pytest.mark.sing_up
+@allure.feature("Testing 'Sign Up' page")
+@allure.label(allure.severity_level.BLOCKER)
+@pytest.mark.create_password
 class TestSingUp:
 
     def test_sing_up(self, driver):
